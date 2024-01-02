@@ -8,4 +8,5 @@ of the float.
 
 
 def floor(n: float) -> int:
+    """Function to make the floor of an int"""
     return int(n)

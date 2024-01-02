@@ -8,4 +8,5 @@ the float.
 
 
 def to_str(n: float) -> str:
+    """Function to convert a float to a str"""
     return str(n)
