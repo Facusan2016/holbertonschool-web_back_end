@@ -9,11 +9,12 @@ You will spawn wait_random n times with the specified max_delay.
 
 
 import asyncio
-from typing import List
+from typing import Sequence
 
 wait_random = __import__('0-basic_async_syntax').wait_random
 
-async def wait_n(n: int, max_delay: int) -> List[float]:
+
+async def wait_n(n: int, max_delay: int) -> Sequence[float]:
     """Async function to return coro wait_random values n times"""
     background_tasks = []
 
@@ -21,10 +22,10 @@ async def wait_n(n: int, max_delay: int) -> List[float]:
         background_tasks.append(
             asyncio.create_task(wait_random(max_delay))
         )
-    
+
     task_res = []
 
     for task in asyncio.as_completed(background_tasks):
         task_res.append(await task)
-        
+
     return task_res
