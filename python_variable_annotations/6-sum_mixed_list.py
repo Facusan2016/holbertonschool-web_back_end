@@ -8,7 +8,7 @@ floats and returns their sum as a float.
 from typing import List, Union
 
 
-def sum_mixed_list(mxd_lst: List[Union[float, int]]) -> float:
+def sum_mixed_list(mxd_lst: List[Union[int, float]]) -> float:
     "Adds an array of mixed types and returns a float"
     total = 0
     for x in mxd_lst:
