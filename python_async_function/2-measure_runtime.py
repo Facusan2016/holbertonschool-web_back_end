@@ -11,13 +11,14 @@ Use the time module to measure an approximate elapsed time.
 """
 
 import time
+import asyncio
 from typing import List
 
 wait_n = __import__('1-concurrent_coroutines').wait_n
 
 
-async def measure_time(n: int, max_delay: int) -> float:
+def measure_time(n: int, max_delay: int) -> float:
     """Use the time module to measure an approximate elapsed time."""
     start = time.monotonic()
-    await wait_n(n, max_delay)
+    asyncio.run(wait_n(n, max_delay))
     return ((time.monotonic() - start) / n)
