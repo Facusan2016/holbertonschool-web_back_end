@@ -48,6 +48,3 @@ class Server:
             return []
 
         return data[index[0]:index[1]]
-
-    def get_hyper(self, page: int = 1, page_size: int = 10) -> List[List]:
-        
