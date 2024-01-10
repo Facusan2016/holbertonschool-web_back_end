@@ -60,6 +60,6 @@ class Server:
             "page": page,
             "data": paginated_dataset,
             "next_page": None if len(paginated_dataset) == 0 else page + 1,
-            "prev_page": None if page <= 0 else page - 1,
-            "total_pages": len(self.dataset()),
+            "prev_page": None if page < 2 else page - 1,
+            "total_pages": math.ceil(len(self.dataset()) / page_size),
         }
