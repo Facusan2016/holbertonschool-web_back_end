@@ -7,14 +7,14 @@ export default class HolbertonCourse {
       throw new TypeError('Name must be a string');
     }
 
-    if (typeof (l) === 'number') {
-      this.__length = l;
+    if (typeof (length) === 'number') {
+      this.__length = length;
     } else {
       throw new TypeError('Length must be a number');
     }
 
-    if (std.every((i) => typeof i === 'string')) {
-      this.__students = std;
+    if (students.every((i) => typeof i === 'string')) {
+      this.__students = students;
     } else {
       throw new TypeError('Students must be an array of strings');
     }
