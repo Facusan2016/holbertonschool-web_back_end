@@ -1,0 +1,1 @@
+In this repository we're working with ES6 promises.
